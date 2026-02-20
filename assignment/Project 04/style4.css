@@ -1,0 +1,81 @@
+body{
+    background-color: rgb(243, 243, 233);
+
+}
+.navbar{
+    display: flex;
+    padding-left: 200px;
+    padding-top: 15px;
+    gap: 50px;
+    
+}
+
+.menu{
+    display: flex;
+    list-style: none;
+    gap: 60px;
+}
+ul li a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+img{
+    height: 30px;
+    width: 80px;
+    margin-top: 6px;
+}
+
+.main{
+    padding-left: 200px;
+    display: flex;
+    
+}
+.Left{
+    width: 500px;
+    margin-top: 180px;
+    
+}
+h1{
+    font-size: 40px;
+}
+p{
+    color: rgb(51, 48, 48);
+}
+
+.Left button{
+    height: 40px;
+    width: 120px;
+    color: whitesmoke;
+    background-color: rgb(62, 129, 69);
+    border: none;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 12px;
+    
+}
+
+.Right :nth-child(1){
+    height: 250px;
+    width: 250px;
+    margin-left: 250px;
+    margin-top: 50px;
+
+}
+.Right :nth-child(2){
+    height: 300px;
+    width: 250px;
+    margin-left: 15px;
+    margin-top: 50px;
+
+}
+.Right :nth-child(3){
+    height: 250px;
+    width: 500px;
+    margin-left: 250px;
+    margin-top: 10px;
+
+}
+
+
