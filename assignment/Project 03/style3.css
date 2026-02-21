@@ -77,17 +77,18 @@ button {
     font-size: 60px;
     margin-bottom: 20px;
     font-weight: 700;
+    margin-bottom: 40px;
 
 }
 
 .last_icon {
     margin-right: 800px;
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
 
 }
 
-.p1 {
+.p3 {
     height: 50px;
     width: 50px;
     margin-left: -300px;
@@ -119,4 +120,26 @@ button {
     outline: none;
     border-radius: 10px;
     color: gray;
+}
+
+footer{
+    margin-left: 900px;
+    margin-top: -50px;
+    
+}
+.p1{
+    width: 100px;
+    font-weight: bold;
+    margin-left: 35px;
+    color: gray;
+}
+.img3{
+    height: 30px;
+    width: 30px;
+    display: flex;
+    margin-top: -10px;
+    gap: 10px;
+}
+p{
+    margin-top: -10px;
 }
