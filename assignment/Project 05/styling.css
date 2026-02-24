@@ -1,4 +1,4 @@
-    * {
+* {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
@@ -9,12 +9,10 @@
       background-color: #f3f8f6;
       background-image: url(./images/stethoscope.png);
       background-repeat: no-repeat;
-      /* background-size: cover; */
       background-position: center;
       overflow-x: hidden;
     }
 
-    /* Navbar */
     .navbar {
       display: flex;
       justify-content: space-between;
@@ -26,7 +24,6 @@
     .logo img {
       width: 150px;
       height: auto;
-      margin-left: 100px;
     }
 
     .nav-links {
@@ -53,20 +50,17 @@
       align-items: center;
       justify-content: space-between;
       padding: 60px 80px;
-      margin-left: 100px;
       position: relative;
     }
 
-    /* top decorative angle */
     .hero>img {
       position: absolute;
       top: 0;
-      left: 0;
-      margin-left: 80px;
+      left: 80px;
     }
 
     .hero-text {
-      max-width: 10000px;
+      max-width: 600px;
       position: relative;
       z-index: 5;
     }
@@ -94,14 +88,14 @@
       border: none;
       border-radius: 50px;
       cursor: pointer;
-      transition: 0.3s;
+      transition: all 0.3s ease;
     }
 
     .btn:hover {
       background: #17a673;
     }
 
-    /* bottom angle + mouse icons */
+    /* bottom icons */
     .hero-text img {
       position: absolute;
     }
@@ -110,14 +104,12 @@
       bottom: -120px;
       left: 0;
       width: 80px;
-      opacity: 0.8;
     }
 
     .hero-text img:nth-child(5) {
       bottom: -130px;
       left: 120px;
       width: 25px;
-      opacity: 0.8;
     }
 
     /* Doctor + Shapes */
@@ -125,7 +117,6 @@
       position: relative;
       width: 500px;
       height: 500px;
-      margin-right: 80px;
     }
 
     .hero-img img {
@@ -133,7 +124,6 @@
     }
 
     .hero-img img:nth-child(1) {
-      /* green box */
       width: 420px;
       top: 50px;
       left: 50px;
@@ -141,7 +131,6 @@
     }
 
     .hero-img img:nth-child(2) {
-      /* yellow box */
       width: 370px;
       top: 110px;
       left: 100px;
@@ -149,48 +138,8 @@
     }
 
     .hero-img img:nth-child(3) {
-      /* doctor */
       width: 450px;
       top: 20px;
       left: 60px;
       z-index: 3;
-    }
-
-    
-    @media (max-width: 900px) {
-      .hero {
-        flex-direction: column;
-        text-align: center;
-        margin-left: 0;
-        padding: 40px 20px;
-      }
-
-      .hero-img {
-        width: 300px;
-        height: auto;
-        margin-top: 60px;
-      }
-
-      .hero-img img:nth-child(1),
-      .hero-img img:nth-child(2),
-      .hero-img img:nth-child(3) {
-        width: 100%;
-        position: relative;
-        top: 0;
-        left: 0;
-      }
-
-      .hero-text h1 {
-        font-size: 2.5rem;
-      }
-
-      .hero-text img {
-        display: none;
-      }
-
-      .navbar {
-        flex-direction: column;
-        gap: 15px;
-        padding: 20px;
-      }
     }
