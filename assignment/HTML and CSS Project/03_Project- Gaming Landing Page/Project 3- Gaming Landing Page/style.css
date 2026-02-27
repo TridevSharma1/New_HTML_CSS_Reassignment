@@ -1,0 +1,183 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+}
+
+body{
+background:#f2f2f2;
+}
+
+.header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 60px;
+background:black;
+color:white;
+}
+
+.header nav a{
+color:white;
+margin:0 15px;
+text-decoration:none;
+}
+
+.auth button{
+background:#ff5a3c;
+border:none;
+padding:10px 20px;
+color:white;
+}
+
+
+.hero{
+height:600px;
+background:url("./Assets/Photos/futuristic-bg.png");
+background-size:cover;
+display:flex;
+align-items:center;
+padding-left:80px;
+color:white;
+}
+
+.hero h1{
+font-size:48px;
+margin-bottom:20px;
+}
+
+.hero p{
+margin-bottom:20px;
+}
+
+
+.primary{
+background:#ff5a3c;
+border:none;
+padding:12px 25px;
+color:white;
+margin-right:10px;
+}
+
+.secondary{
+background:transparent;
+border:1px solid white;
+color:white;
+padding:12px 25px;
+}
+
+.popular{
+padding:60px;
+text-align:center;
+background:#eee;
+}
+
+.cards{
+display:flex;
+gap:20px;
+justify-content:center;
+margin-top:40px;
+}
+
+.card{
+background:white;
+padding:15px;
+width:200px;
+}
+
+.card img{
+width:100%;
+}
+
+.card button{
+margin-top:10px;
+background:#ff5a3c;
+border:none;
+color:white;
+padding:8px 15px;
+}
+
+.war{
+display:flex;
+padding:60px;
+gap:50px;
+align-items:center;
+background:white;
+}
+
+.war img{
+width:400px;
+}
+
+
+.weekly{
+padding:60px;
+}
+
+.weekly-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:40px;
+margin-top:40px;
+}
+
+.weekly-card img{
+width:100%;
+}
+
+.weekly-card button{
+background:#ff5a3c;
+border:none;
+padding:8px 15px;
+color:white;
+margin-top:10px;
+}
+
+
+
+.played{
+background:black;
+color:white;
+padding:60px;
+text-align:center;
+}
+
+.played-grid{
+display:flex;
+gap:30px;
+justify-content:center;
+margin-top:40px;
+}
+
+.played-grid img{
+width:250px;
+}
+
+.cta{
+background:url("./Assets/Photos/Rectangle\ 606.png");
+background-size:cover;
+padding:120px;
+text-align:center;
+color:white;
+}
+
+.cta button{
+background:#ff5a3c;
+border:none;
+padding:12px 30px;
+color:white;
+margin-top:20px;
+}
+
+footer{
+background:#000;
+color:white;
+padding:60px;
+}
+
+.footer-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:40px;
+}
