@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background: #f3f4f8;
+            color: #222;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        header {
+            position: absolute;
+            width: 100%;
+            padding: 25px 80px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 10;
+        }
+
+        header .logo {
+            color: white;
+            font-weight: 600;
+            font-size: 20px;
+        }
+
+        header nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 30px;
+            font-size: 14px;
+        }
+
+
+        .hero {
+            height: 90vh;
+            background: url('./Photos/mainBackground.png') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.45);
+        }
+
+        .hero-content {
+            position: relative;
+            color: white;
+            padding-left: 80px;
+           
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            background: #6c63ff;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .logo-strip {
+            background: white;
+            width: 85%;
+            margin: -20px auto 60px;
+            padding: 30px;
+            border-radius: 20px;
+            display: flex;
+            justify-content: space-around;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .logo-strip div {
+            color: #6c63ff;
+            font-weight: 600;
+            font-size: 20px;
+        }
+
+
+        .properties {
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        .properties h2 {
+            font-size: 32px;
+            margin-bottom: 40px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            width: 85%;
+            margin: auto;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            text-align: left;
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .card h4 {
+            font-size: 14px;
+        }
+
+        .price {
+            color: #6c63ff;
+            font-size: 13px;
+            margin-top: 5px;
+        }
+
+        .small-btn {
+            background: #6c63ff;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+        }
+
+        .feature {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+            width: 85%;
+            margin: 80px auto;
+        }
+
+        .feature img {
+            width: 50%;
+            border-radius: 25px;
+        }
+
+        .feature-text {
+            width: 50%;
+        }
+
+        .feature-text h2 {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .feature.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .newsletter {
+            width: 85%;
+            margin: 100px auto;
+            background: linear-gradient(90deg, #6c63ff, #8e85ff);
+            color: white;
+            padding: 60px;
+            border-radius: 25px;
+            text-align: center;
+        }
+
+        .newsletter h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .newsletter input {
+            padding: 12px 20px;
+            width: 300px;
+            border: none;
+            border-radius: 20px;
+            margin-right: 10px;
+        }
+
+        footer {
+            width: 85%;
+            margin: 80px auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        footer h4 {
+            margin-bottom: 10px;
+        }
+
+        footer p {
+            font-size: 13px;
+            margin-bottom: 6px;
+            color: #555;
+        }
+
+        @media(max-width:900px) {
+
+            .grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .feature {
+                flex-direction: column;
+            }
+
+            .feature img,
+            .feature-text {
+                width: 100%;
+            }
+
+            header {
+                padding: 20px;
+            }
+
+            .hero-content {
+                padding-left: 20px;
+            }
+        }
+
+        @media(max-width:600px) {
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            .logo-strip {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo"><img src="./Icons/Logo.svg" alt=""></div>
+        <nav>
+            <a href="#">Location</a>
+            <a href="#">Blogs</a>
+            <a href="#">Testimonials</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Home That Makes<br>You Living Life!</h1>
+            <p>Are you looking for amazing Real estate? Don't worry we got you.</p>
+            <button class="btn">Learn More</button>
+        </div>
+    </section>
+
+    <div class="logo-strip">
+        <img src="./Icons/logoName.svg" alt="">
+        <img src="./Icons/logoName.svg" alt="">
+        <img src="./Icons/logoName.svg" alt="">
+        <img src="./Icons/logoName.svg" alt="">
+
+    </div>
+
+    <section class="properties">
+        <h2>Our Best Estate,<br>are Modern!</h2>
+
+        <div class="grid">
+
+            <div class="card">
+                <img src="./Photos/cardImage1.png">
+                <div class="card-content">
+                    <div>
+                        <h4>Mixtownia</h4>
+                        <div class="price">$205,500</div>
+                    </div>
+                    <button class="small-btn">Detail</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="./Photos/cardImage2.png">
+                <div class="card-content">
+                    <div>
+                        <h4>Mirtawan</h4>
+                        <div class="price">$102,200</div>
+                    </div>
+                    <button class="small-btn">Detail</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="./Photos/cardImage3.png">
+                <div class="card-content">
+                    <div>
+                        <h4>Wartawan</h4>
+                        <div class="price">$135,900</div>
+                    </div>
+                    <button class="small-btn">Detail</button>
+                </div>
+            </div>
+
+             <div class="card">
+                <img src="./Photos/cardImage4.png">
+                <div class="card-content">
+                    <div>
+                        <h4>Wartawan</h4>
+                        <div class="price">$135,900</div>
+                    </div>
+                    <button class="small-btn">Detail</button>
+                </div>
+            </div>
+             <div class="card">
+                <img src="./Photos/cardImage5.png">
+                <div class="card-content">
+                    <div>
+                        <h4>Wartawan</h4>
+                        <div class="price">$135,900</div>
+                    </div>
+                    <button class="small-btn">Detail</button>
+                </div>
+            </div>
+             <div class="card">
+                <img src="./Photos/cardImage6.png">
+                <div class="card-content">
+                    <div>
+                        <h4>Wartawan</h4>
+                        <div class="price">$135,900</div>
+                    </div>
+                    <button class="small-btn">Detail</button>
+                </div>
+            </div>
+             <div class="card">
+                <img src="./Photos/cardImage7.png">
+                <div class="card-content">
+                    <div>
+                        <h4>Wartawan</h4>
+                        <div class="price">$135,900</div>
+                    </div>
+                    <button class="small-btn">Detail</button>
+                </div>
+            </div>
+             <div class="card">
+                <img src="./Photos/cardImage8.png">
+                <div class="card-content">
+                    <div>
+                        <h4>Wartawan</h4>
+                        <div class="price">$135,900</div>
+                    </div>
+                    <button class="small-btn">Detail</button>
+                </div>
+            </div>
+             <div class="card">
+                <img src="./Photos/cardImage9.png">
+                <div class="card-content">
+                    <div>
+                        <h4>Wartawan</h4>
+                        <div class="price">$135,900</div>
+                    </div>
+                    <button class="small-btn">Detail</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="feature">
+        <img src="./Photos/featuresImage1.png">
+        <div class="feature-text">
+            <h2>Modern, Trendy,<br>Affordable!</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <button class="btn">Early Bird Book</button>
+        </div>
+    </section>
+
+    <section class="feature reverse">
+        <img src="./Photos/featuresImage2.png">
+        <div class="feature-text">
+            <h2>Unique House<br>for Long Term!</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <button class="btn">Early Bird Book</button>
+        </div>
+    </section>
+
+    <section class="newsletter">
+        <h2>Subscribe to Our Newsletter<br>For Weekly Article Update.</h2>
+        <input type="email" placeholder="Enter your email address">
+        <button class="btn">Subscribe</button>
+    </section>
+
+    <footer>
+        <div>
+            <h3><img src="./Icons/Logo.svg" alt=""></h3>
+            <img src="./Icons/facebook.png" alt="">
+            <img src="./Icons/instagram.png" alt="">
+            <img src="./Icons/twitter.png" alt="">
+            <p>2022 Award winning Real estate</p>
+        </div>
+
+        <div>
+            <h4>Location</h4>
+            <p>America</p>
+            <p>Asia</p>
+            <p>Europe</p>
+            <p>Africa</p>
+        </div>
+
+        <div>
+            <h4>Contact</h4>
+            <p>About Me</p>
+            <p>Teams</p>
+            <p>Profile</p>
+            <p>FAQ</p>
+        </div>
+
+        <div>
+            <h4>Legals</h4>
+            <p>Privacy</p>
+            <p>Disclaimer</p>
+            <p>Terms</p>
+            <p>Company</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
